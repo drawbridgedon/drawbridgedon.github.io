@@ -1,0 +1,56 @@
+body{
+   background-color: rgb(228, 195, 154); 
+   font-family: Source Code Pro;
+   padding-left: 30px;
+   padding-right: 30px;
+   color: rgb(103, 94, 89);
+}
+#type{
+    font-size: 55px;
+    font-weight: bold;
+    
+}
+
+#typeAbout{
+  font-size: 55px;
+  font-weight: bold;
+}
+
+a {
+    color: rgb(103, 94, 89);
+}
+
+#aboutli{
+
+    font-family: Source Code Pro;
+    color: rgb(103, 94, 89);
+    font-size: 35px;
+}
+
+#projectsli{
+
+    font-size: 35px;
+}
+
+#bio{
+
+    font-size: 20px;
+}
+
+#cmdbar{
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+
+}
+
+#output{
+  position: absolute;
+  bottom: 300px;
+}
+
+#aboutBio{
+  font-size: 20px;
+}
+
+

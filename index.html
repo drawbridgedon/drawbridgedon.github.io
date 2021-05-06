@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="typeDrawbridge();">
+    <p id="type">
+        
+    </p>
+    
+    <h2 id="bio">
+        I do the thing and you can use the terminal !!!
+    </h2>
+    <br>
+    <h2 id="aboutli">
+        <a href="about.html">
+        About Me
+        </a>
+    </h2>
+    <h2 id="projectsli">
+        <a href="projects.html">
+        Project Posts
+        </a>
+    </h2>
+    <div id="output">
+        <p id="demo">
+
+        </p>
+    </div>
+    <div id="cmdbar">
+        <form id="cmdform" onsubmit="myFunction();return false"> 
+            <input style="color: rgb(103, 94, 89); font-weight: bold; width: 96%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;background-color: rgb(228, 195, 154);;border-radius: 15px;border: 5px solid #C5AA8A;outline:none;" 
+            placeholder="Type 'help' to see all interactive commands" type="text">
+        </form>
+    </div>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("cmdform");
+          var text = "";
+          text = x.elements[0].value;
+          if(text == "help"){
+            document.getElementById("demo").innerHTML = "Commands -" + "<br />" + "About: Takes you to the about page" + "<br />" + "Home: Takes you to the home page";
+          }
+          else if (text == "about") {
+            window.location.replace("./about.html");
+          }
+          
+        }
+        var i = 0;
+        var txt = 'Drawbridge';
+        var newe = 'dsasdasd';        
+        var speed = 150; /* The speed/duration of the effect in milliseconds */
+
+        function typeDrawbridge() {
+         if (i < txt.length) {
+             document.getElementById("type").innerHTML += txt.charAt(i);
+             i++;
+             setTimeout(typeDrawbridge, speed);
+         }
+        }
+
+
+
+        
+    </script>
+</body>
+</html>

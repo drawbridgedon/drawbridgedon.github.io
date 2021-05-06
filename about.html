@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>About Me</title>
+</head>
+<body onload="typeAbout();">
+    <p id="typeAbout">
+    </p>
+
+    <p id="aboutBio">
+        I am a guy who is learning programming. I have been coding on <br>
+        and off for around 2 years now. I would say I am competent <br>
+        at Python, JavaScript, and small amounts of Java and C#. <br>
+        My goals right now are to switch to linux, get bettter at <br>
+        web development(this website is practice), learn golang, and last, <br>
+        learn c++.
+    </p>
+    <div id="output">
+        <p id="demo">
+
+        </p>
+    </div>
+
+    <div id="cmdbar">
+        <form id="cmdform" onsubmit="myFunction();return false"> 
+            <input style="color: rgb(103, 94, 89); font-weight: bold; width: 96%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;background-color: rgb(228, 195, 154);;border-radius: 15px;border: 5px solid #C5AA8A;outline:none;" 
+            placeholder="Type 'help' to see all interactive commands" type="text">
+        </form>
+    </div>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("cmdform");
+          var text = "";
+          text = x.elements[0].value;
+          if(text == "help"){
+            document.getElementById("demo").innerHTML = "Commands - About: Takes you to the about page Home: Takes you to the home page";
+          }
+          else if (text == "about") {
+            window.location.replace("./about.html");
+          }
+          else if (text == "home") {
+              window.location.replace("./index.html");
+          }
+          
+        }
+
+        var i = 0;
+        var txt = 'About Me';    
+        var speed = 150; /* The speed/duration of the effect in milliseconds */
+
+        function typeAbout() {
+         if (i < txt.length) {
+             document.getElementById("typeAbout").innerHTML += txt.charAt(i);
+             i++;
+             setTimeout(typeAbout, speed);
+         }
+        }
+    </script>
+</body>
+</html>
